@@ -3,6 +3,8 @@
 # For wrapping react guide, visit https://reflex.dev/docs/wrapping-react/overview/
 
 import reflex as rx
+from reflex.vars import Var
+
 
 # Some libraries you may want to wrap may require dynamic imports.
 # This is because they they may not be compatible with Server-Side Rendering (SSR).
@@ -17,11 +19,22 @@ class Simpleicons(rx.Component):
     """Simpleicons component."""
 
     # The React library to wrap.
-    library = "Fill-Me"
+    library = "@icons-pack/react-simple-icons"
 
     # The React component tag.
-    tag = "Fill-Me"
+    tag = "None"
 
+    # Default Color.
+    color = f"var(--accent-a10)"
+
+    # Default Size.
+    size = 24
+
+    @classmethod
+    def create(cls, *children, **props):
+        if len(children) == 1 and type(children[0]) == str:
+            props["tag"] = f"Si{children[0].capitalize()}"
+        return super().create(*children, **props)
     # If the tag is the default export from the module, you must set is_default = True.
     # This is normally used when components don't have curly braces around them when importing.
     # is_default = True

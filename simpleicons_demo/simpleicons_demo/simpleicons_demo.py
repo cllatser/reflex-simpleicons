@@ -21,11 +21,19 @@ def index() -> rx.Component:
         rx.vstack(
             rx.heading("Welcome to Reflex!", size="9"),
             rx.text(
-                "Test your custom component by editing ", 
+                "Test your custom component by editing ",
                 rx.code(filename),
                 font_size="2em",
             ),
-            simpleicons(),
+            rx.hstack(
+                simpleicons("facebook"),
+                simpleicons("microsoft"),
+                simpleicons("1001tracklists"),
+                simpleicons("7zip"),
+                simpleicons("Python", size=90, color="currentColor"),
+                width="100%",
+                justify="center"
+            ),
             align="center",
             spacing="7",
         ),

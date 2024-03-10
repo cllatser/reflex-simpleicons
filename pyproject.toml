@@ -12,7 +12,7 @@ description = "Reflex custom component simpleicons"
 readme = "README.md"
 license = { text = "Apache-2.0" }
 requires-python = ">=3.8"
-authors = [{ name = "Your Name", email = "YOUREMAIL@domain.com" }]
+authors = [{ name = "cllatser", email = "carlos@llatser.dev" }]
 keywords = [
     "reflex",
     "reflex-custom-components"]
@@ -26,7 +26,7 @@ classifiers = [
 ]
 
 [project.urls]
-Homepage = "https://github.com"
+Homepage = "https://github.com/cllatser/reflex-simpleicons"
 
 [project.optional-dependencies]
 dev = ["build", "twine"]
