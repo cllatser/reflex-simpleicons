@@ -1,0 +1,2 @@
+reflex==0.4.4a2
+reflex-simpleicons
