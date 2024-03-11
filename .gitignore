@@ -5,3 +5,5 @@ dist/
 venv/
 beta/
 .idea/
+icons/
+generate_list.py

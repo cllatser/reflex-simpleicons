@@ -15,6 +15,7 @@ class State(rx.State):
     pass
 
 
+@rx.page(title="Reflex Simple Icons")
 def index() -> rx.Component:
     return rx.center(
         rx.theme_panel(),
@@ -26,13 +27,14 @@ def index() -> rx.Component:
                 font_size="2em",
             ),
             rx.hstack(
-                simpleicons("facebook"),
+                simpleicons("amazon"),
                 simpleicons("microsoft"),
-                simpleicons("1001tracklists"),
+                simpleicons("jetbrains"),
                 simpleicons("7zip"),
-                simpleicons("Python", size=90, color="currentColor"),
+                simpleicons("Python"),
                 width="100%",
-                justify="center"
+                justify="center",
+                spacing="7"
             ),
             align="center",
             spacing="7",
@@ -43,4 +45,4 @@ def index() -> rx.Component:
 
 # Add state and page to the app.
 app = rx.App()
-app.add_page(index)
+
