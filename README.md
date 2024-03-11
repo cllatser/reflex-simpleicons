@@ -20,14 +20,14 @@ from reflex_simpleicons import simpleicons
 
 Search for the logo you want to use on [Simple Icons](https://simpleicons.org/) and click on the name. This will copy its name and you can paste it into the component.
 
-![reflex-simpleicons-web.PNG](..%2F..%2F..%2F..%2FDownloads%2Freflex-simpleicons-web.PNG)
+![reflex-simpleicons-web.PNG](img%2Freflex-simpleicons-web.PNG)
 
 Use in your Reflex UI:
 
 ```python
 simpleicons("python")
 ```
-![python-icon.PNG](..%2F..%2F..%2F..%2FDownloads%2Fpython-icon.PNG)
+![python-icon.PNG](img%2Fpython-icon.PNG)
 
 ## Styling
 
@@ -40,7 +40,7 @@ simpleicons("python", color="red", size=48),
 simpleicons("python", color="#ECD53F", size=67),
 simpleicons("python", color="#5F259F", size=97),
 ```
-![python-icon-size-colors.PNG](..%2F..%2F..%2F..%2FDownloads%2Fpython-icon-size-colors.PNG)
+![python-icon-size-colors.PNG](img%2Fpython-icon-size-colors.PNG)
 
 ## Example
 
@@ -63,7 +63,7 @@ def demo_brands() -> rx.Component:
         class_name="demo-brands"
     )
 ```
-![reflex-simpleicons.PNG](..%2F..%2F..%2F..%2FDownloads%2Freflex-simpleicons.PNG)
+![reflex-simpleicons.PNG](img%2Freflex-simpleicons.PNG)
 
 ## Disclaimer
 
