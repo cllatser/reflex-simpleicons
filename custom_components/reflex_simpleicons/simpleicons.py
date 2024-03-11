@@ -6,16 +6,22 @@ import reflex as rx
 
 
 class Simpleicons(rx.Component):
-    """Simpleicons component."""
+    """
+    This is the Simpleicons class. When constructing a Simpleicons object, you can specify the following fields:
+
+    - tag: A tag for the icon.
+    - size: The size of the icon.
+    - color: The color of the icon.
+
+    Example usage:
+    simpleicons_obj = Simpleicons(tag='TheTag', size='TheSize', color='TheColor')
+    """
 
     # The React library to wrap.
     library = "@icons-pack/react-simple-icons"
 
     # The React component tag.
     tag = "None"
-
-    # Default Color.
-    color = f"var((--current-color)"
 
     # Default Size.
     size = 48
@@ -39,11 +45,7 @@ class Simpleicons(rx.Component):
                """
         if children:
             if len(children) == 1 and type(children[0]) == str:
-                if children[0].lower() in SIMPLE_ICONS_LIST:
-                    props["tag"] = f"Si{children[0].capitalize()}"
-                else:
-                    raise ValueError(f"Invalid icon tag: {children[0].lower()}. See full list at "
-                                     f"https://simpleicons.org/")
+                props["tag"] = children[0]
             else:
                 raise AttributeError(
                     f"Passing multiple children to Simpleicons component is not allowed: remove positional "
@@ -51,6 +53,16 @@ class Simpleicons(rx.Component):
                 )
         if "tag" not in props.keys():
             raise AttributeError("Missing 'tag' keyword-argument for Simpleicons")
+
+        if (
+            type(props["tag"]) != str
+            or props["tag"].lower() not in SIMPLE_ICONS_LIST
+        ):
+            raise ValueError(f"Invalid icon tag: {props['tag']}. See full list at "
+                             f"https://simpleicons.org/"
+                             )
+
+        props["tag"] = f"Si{props['tag'].capitalize()}"
 
         return super().create(*children, **props)
 

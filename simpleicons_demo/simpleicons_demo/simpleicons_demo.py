@@ -27,11 +27,12 @@ def index() -> rx.Component:
                 font_size="2em",
             ),
             rx.hstack(
-                simpleicons("amazon"),
+                simpleicons(tag="Amazon"),
                 simpleicons("microsoft"),
-                simpleicons("jetbrains"),
+                simpleicons(tag="jetbrains"),
                 simpleicons("7zip"),
                 simpleicons("Python"),
+                simpleicons("linux"),
                 width="100%",
                 justify="center",
                 spacing="7"
