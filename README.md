@@ -2,8 +2,6 @@
 
 A Reflex wrapper for [Simple Icons](https://simpleicons.org/), the best library of SVG icons from the most popular brands. 
 
-This wrap uses the [react-simple-icons](https://github.com/icons-pack/react-simple-icons)
-
 ## Installation
 
 ```bash
@@ -23,6 +21,8 @@ Search for the logo you want to use on [Simple Icons](https://simpleicons.org/) 
 ![reflex-simpleicons-web.PNG](img%2Freflex-simpleicons-web.PNG)
 
 Use in your Reflex UI:
+
+By default it will have the color of the main text, switching automatically between light and dark mode. The default size is 48px.
 
 ```python
 simpleicons("python")
@@ -44,6 +44,12 @@ simpleicons("python", color="#5F259F", size=97),
 
 ## Example
 
+If you want to use the default HEX color of the brand you can add the property:
+
+```python
+brand_color=True
+```
+
 ```python
 import reflex as rx
 from reflex_simpleicons import simpleicons
@@ -51,19 +57,19 @@ from reflex_simpleicons import simpleicons
 
 def demo_brands() -> rx.Component:
     return rx.el.div(
-        simpleicons("7zip", color="#000000", size=90),
-        simpleicons(tag="Dell", color="#007DB8", size=90),
-        simpleicons(tag="Microsoft", color="#5E5E5E", size=90),
-        simpleicons(tag="Amazon", color="#FF9900", size=90),
-        simpleicons(tag="Apple", color="#000000", size=90),
-        simpleicons(tag="Spotify", color="#1DB954", size=90),
-        simpleicons(tag="3m", color="#FF0000", size=90),
-        simpleicons(tag="Taichigraphics", color="#000000", size=90),
-        simpleicons(tag="Dotenv", color="#ECD53F", size=90),
+        simpleicons("7zip", brand_color=True, size=90),
+        simpleicons(tag="Dell", brand_color=True, size=90),
+        simpleicons(tag="Microsoft", brand_color=True, size=90),
+        simpleicons(tag="Amazon", brand_color=True, size=90),
+        simpleicons(tag="Apple", brand_color=True, size=90),
+        simpleicons(tag="Spotify", brand_color=True, size=90),
+        simpleicons(tag="3m", brand_color=True, size=90),
+        simpleicons(tag="bitwarden", brand_color=True, size=90),
+        simpleicons(tag="Dotenv", brand_color=True, size=90),
         class_name="demo-brands"
     )
 ```
-![reflex-simpleicons.PNG](img%2Freflex-simpleicons.PNG)
+![brands_color.PNG](img%2Fbrands_color.PNG)
 
 ## Disclaimer
 
