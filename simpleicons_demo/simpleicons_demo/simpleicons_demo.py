@@ -9,10 +9,8 @@ from reflex_simpleicons import simpleicons
 filename = f"{config.app_name}/{config.app_name}.py"
 
 
-class State(rx.State):
+class Brands(rx.State):
     """The app state."""
-
-    pass
 
 
 @rx.page(title="Reflex Simple Icons")
@@ -26,17 +24,19 @@ def index() -> rx.Component:
                 rx.code(filename),
                 font_size="2em",
             ),
-            rx.hstack(
-                simpleicons(tag="Amazon"),
-                simpleicons("microsoft"),
-                simpleicons(tag="jetbrains"),
-                simpleicons("7zip"),
-                simpleicons("Python"),
-                simpleicons("linux"),
-                width="100%",
-                justify="center",
-                spacing="7"
-            ),
+            rx.hstack(simpleicons("7zip", brand_color=True, size=90),
+                      simpleicons(tag="Dell", brand_color=True, size=90),
+                      simpleicons(tag="Microsoft", brand_color=True, size=90),
+                      simpleicons(tag="Amazon", brand_color=True, size=90),
+                      simpleicons(tag="Apple", brand_color=True, size=90),
+                      simpleicons(tag="Spotify", brand_color=True, size=90),
+                      simpleicons(tag="3m", brand_color=True, size=90),
+                      simpleicons(tag="bitwarden", brand_color=True, size=90),
+                      simpleicons(tag="Dotenv", brand_color=True, size=90),
+                      width="100%",
+                      justify="center",
+                      spacing="7"
+                      ),
             align="center",
             spacing="7",
         ),
@@ -46,4 +46,3 @@ def index() -> rx.Component:
 
 # Add state and page to the app.
 app = rx.App()
-
