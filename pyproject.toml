@@ -1,36 +1,68 @@
-[build-system]
-requires = [
-    "setuptools",
-    "wheel",
-]
-build-backend = "setuptools.build_meta"
-
-[project]
-name = "reflex-simpleicons"
-version = "0.0.5"
-description = "Reflex Custom Component for Simple Icons"
-readme = "README.md"
-license = { text = "Apache-2.0" }
-requires-python = ">=3.8"
-authors = [{ name = "cllatser", email = "carlos@llatser.dev" }]
-keywords = ["reflex", "reflex-custom-components"]
-
-dependencies = [
-    "reflex>=0.4.2"
-]
-
-classifiers = [
-  "Development Status :: 4 - Beta",
-]
-
-[project.urls]
-Homepage = "https://github.com/cllatser/reflex-simpleicons"
+[build-system]
+
+requires = [
+
+    "setuptools",
+
+    "wheel",
+
+]
+
+build-backend = "setuptools.build_meta"
+
+
+
+[project]
+
+name = "reflex-simpleicons"
+
+version = "0.0.6"
+
+description = "Reflex Custom Component for Simple Icons"
+
+readme = "README.md"
+
+license = { text = "Apache-2.0" }
+
+requires-python = ">=3.8"
+
+authors = [{ name = "cllatser", email = "carlos@llatser.dev" }]
+
+keywords = ["reflex", "reflex-custom-components", "custom-components", "icons", "simpleicons"]
+
+
+
+dependencies = [
+
+    "reflex>=0.4.2"
+
+]
+
+
+
+classifiers = [
+
+  "Development Status :: 4 - Beta",
+
+]
+
+
+
+[project.urls]
+
+Homepage = "https://github.com/cllatser/reflex-simpleicons"
+
 homepage = "https://github.com/cllatser/reflex-simpleicons"
 source = "https://github.com/cllatser/reflex-simpleicons"
-
-[project.optional-dependencies]
-dev = ["build", "twine"]
-
 
-[tool.setuptools.packages.find]
+
+[project.optional-dependencies]
+
+dev = ["build", "twine"]
+
+
+
+
+[tool.setuptools.packages.find]
+
 where = ["custom_components"]

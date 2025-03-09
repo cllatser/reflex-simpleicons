@@ -1,10 +1,12 @@
 """Reflex custom component Simple Icons."""
+from typing import Union
+
 import reflex as rx
 from .data.brands_color import default_color
 from .data.brands_svg import brands
 
 
-def simpleicons(tag="simpleicons", color="", brand_color=False, size=48) -> rx.Component:
+def simpleicons(tag="simpleicons", color: Union[str, rx.Color] ="", brand_color=False, size=48) -> rx.Component:
     """Create a Simple Icon"""
     if tag.lower() in brands:
         # Checks if the entered name exists in the dictionary
@@ -24,7 +26,7 @@ def simpleicons(tag="simpleicons", color="", brand_color=False, size=48) -> rx.C
 
     return rx.el.svg(
         # Returns an svg component
-        rx.el.path(d=brands[tag.lower()]),
+        rx.el.svg.path(d=brands[tag.lower()]),
         role="img",
         width=f"{size}px",
         color=color,

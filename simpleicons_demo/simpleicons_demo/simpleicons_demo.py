@@ -1,6 +1,5 @@
 """Welcome to Reflex! This file showcases the custom component in a basic app."""
 
-from rxconfig import config
 
 import reflex as rx
 
@@ -15,7 +14,7 @@ def index() -> rx.Component:
             rx.heading("Simple Icons Custom Component", size="7"),
             rx.hstack(simpleicons("7zip", brand_color=True, size=90),
                       simpleicons(tag="Dell", brand_color=True, size=90),
-                      simpleicons(tag="Microsoft", brand_color=True, size=90),
+                      simpleicons(tag="southwestairlines", brand_color=True, size=90),
                       simpleicons(tag="Amazon", brand_color=True, size=90),
                       simpleicons(tag="Apple", brand_color=True, size=90),
                       simpleicons(tag="Spotify", brand_color=True, size=90),
